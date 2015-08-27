@@ -1,3 +1,15 @@
+/*
+ This code will do an HTTP middleware action as illustrated below thanks to Alex Edwards:
+	mainHandler => dispatchHandler => serveDisptach
+	mainHandler will do the following:
+		1.Authorizing the request in order to serve the HTTP Request using JWT.
+		2.Checking the Content-Length if empty request will discarded
+		3.Checking the Content-Type if not application/json => which is "text/plain"
+	dispatchHandler will do nothing as of this time until I made my decision :)
+	serveDisptach will respond with the required HTTP Response also it modifies the header by adding 
+	my own company name which is "InnovativeTech"
+*/
+
 package main
 
 import (
